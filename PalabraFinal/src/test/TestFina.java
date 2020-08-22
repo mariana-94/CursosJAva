@@ -22,5 +22,6 @@ public class TestFina {
         System.out.println("perosna1 nombre = " + persona1.getNombre());
         persona1.setNombre("Juan");
         System.out.println("perosna1 nombre = " + persona1.getNombre());
+        System.out.println("Este es el cambio desde gitKraken");
     }
 }
