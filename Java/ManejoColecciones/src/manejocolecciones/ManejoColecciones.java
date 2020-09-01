@@ -14,11 +14,15 @@ public class ManejoColecciones {
          //elemento repetido
          milista.add(3);
          
-         imprimir(milista);
+//         imprimir(milista);
          
          Set miSet = new HashSet();
-         
-         
+         miSet.add("100");
+         miSet.add("200");
+         miSet.add("300");
+         //elemento duplicado no se agrega
+         miSet.add("300");
+         imprimir(miSet);
          
          
     }
