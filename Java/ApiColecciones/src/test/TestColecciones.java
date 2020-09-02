@@ -1,9 +1,9 @@
 
-package manejocolecciones;
+package test;
 
 import java.util.*;
 
-public class ManejoColecciones {
+public class TestColecciones {
     //set y listas mantienen el orden y no se necesita decir el numero de datos que debe contener
     public static void main(String[] args) {
         List milista = new ArrayList();
