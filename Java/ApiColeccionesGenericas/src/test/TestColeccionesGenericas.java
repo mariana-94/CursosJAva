@@ -4,44 +4,44 @@ package test;
 import java.util.*;
 
 public class TestColeccionesGenericas {
-    //set y listas mantienen el orden y no se necesita decir el numero de datos que debe contener
     public static void main(String[] args) {
-        List milista = new ArrayList();
+        List<String> miLista = new ArrayList<>();
+        miLista.add("Lunes");
+        miLista.add("Martes");
+        miLista.add("Miercoles");
+        miLista.add("Jueves");
+        miLista.add("Viernes");
+        miLista.add("Viernes");
+        String elemento = miLista.get(0);
+        //System.out.println("elemento: " +elemento);
         
-        milista.add("1");
-        milista.add(2);
-        milista.add(3);
-         //elemento repetido
-         milista.add(3);
+        //imprimir(miLista);
+        
+         Set<String> miSet = new HashSet<>();
+         miSet.add("Lunes");
+         miSet.add("Martes");
+         miSet.add("Miercoles");
+         miSet.add("Jueves");
+         miSet.add("Viernes");
+         miSet.add("Viernes");
          
-//         imprimir(milista);
-         
-         Set miSet = new HashSet();
-         miSet.add("100");
-         miSet.add("200");
-         miSet.add("300");
-         //elemento duplicado no se agrega 
-         miSet.add("300");
-//         imprimir(miSet);
-
-        Map miMapa = new HashMap();
-        ///a diferencia de una lista maneja el concepto de llave valor
+         //imprimir(miSet);
+        
+        Map<String,String> miMapa = new HashMap<>();
         miMapa.put("valor1", "Juan");
         miMapa.put("valor2", "David");
         miMapa.put("valor3", "Niss");
-        //elemento duplicado sustituye al valor agregado previamente
-        miMapa.put("valor3", "Po");
-        //imprimimos las llaves
+        miMapa.put("valor3", "Po");//modifica el valor no lo agrega porque las llaves son set  que no aceptan duplicados
+        
+        String elementoMapa = miMapa.get("valor3");
+        //System.out.println("elementoMapa: " +elementoMapa);
+        
         imprimir(miMapa.keySet());
-        //imprimimos los valores
         imprimir(miMapa.values());
-        //imprimir un  valor asociado a una llave
-        System.out.println(miMapa.get("valor3"));  
-      
     }
     
-    private static void imprimir (Collection coleccion){
-        for(Object elemento: coleccion){
+    private static void imprimir (Collection<String> coleccion){
+        for(String elemento: coleccion){
             System.out.println("elemnto: " + elemento);
         }
         System.out.println("");
