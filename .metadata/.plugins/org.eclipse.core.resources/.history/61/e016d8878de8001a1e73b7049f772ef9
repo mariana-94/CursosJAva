@@ -1,0 +1,11 @@
+package manejocolecciones;
+
+import java.util.*;
+
+public class ManejoColecciones {
+	
+	List milista = new ArrayList();
+	
+	
+
+}
